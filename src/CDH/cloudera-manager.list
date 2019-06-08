@@ -1,0 +1,2 @@
+# Cloudera Manager 6.1.1
+deb [arch=amd64] http://archive.cloudera.com/cm6/6.1.1/ubuntu1604/apt xenial-cm6.1.1 contrib
