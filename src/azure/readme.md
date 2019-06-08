@@ -1,0 +1,1 @@
+# For keep azure resource
