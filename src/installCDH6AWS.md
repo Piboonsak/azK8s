@@ -232,3 +232,47 @@ always madvise [never]
 ```
 
 Make AMI >> Completed!
+
+# CDH Install
+
+connect to instance :
+ssh -i "CDH6Test.pem" centos@ec2-18-139-73-199.ap-southeast-1.compute.amazonaws.com
+
+sudo su
+cd
+
+
+wget https://archive.cloudera.com/cm6/6.0.0/cloudera-manager-installer.bin
+
+wget https://archive.cloudera.com/cm6/6.0.1/cloudera-manager-installer.bin
+
+wget https://archive.cloudera.com/cm6/6.2.0/cloudera-manager-installer.bin
+
+chmod u+x cloudera-manager-installer.bin
+
+./cloudera-manager-installer.bin
+
+to uninstall
+sudo /usr/share/cmf/uninstall-cloudera-manager.sh
+
+log file
+/var/log/cloudera-manager-installer/
+
+sudo tail -f /var/log/cloudera-scm-server/cloudera-scm-server.log
+
+
+set hostname
+
+nm-node     ip-172-31-16-140.ap-southeast-1.compute.internal
+data-node1  ip-172-31-27-33.ap-southeast-1.compute.internal
+data-node2  ip-172-31-28-245.ap-southeast-1.compute.internal
+data-node3  ip-172-31-24-21.ap-southeast-1.compute.internal
+
+
+## postgres not start
+
+Check service status 
+
+systemctl list-units|grep postgresql
+
+systemctl status postgresql.service
